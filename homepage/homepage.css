@@ -13,8 +13,8 @@ body{
     display: flex;
     align-items: center;
  	  /*下方灰色阴影*/
-/*webkit-box-shadow: 0 0 20px 0 #dedede;
-    box-shadow: 0 0 20px 0 #dedede;*/
+    webkit-box-shadow: 0 0 20px 0 #dedede;
+    box-shadow: 0 0 20px 0 #dedede;
  }
  a{
     text-decoration: none;
@@ -36,7 +36,11 @@ body{
     font-weight: 400;
     margin: 0;
 }
- .header-icon{
+.header-icon.left{
+    padding: 20px 5px 10px 10px;
+    margin-top: 10px;
+}
+.header-icon{
     padding: 10px 5px 10px 10px;
     margin-top: 10px;
 }
@@ -45,7 +49,28 @@ body{
     margin-top: 14px;
     padding-top: 20px;
 }
+.news-content{
+	display: flex;
+	direction: row;
+	font-size: 5px;
+}
+.news h2{
+	margin-left: 10px;
+	
+}
+.news-content img{
+	padding: 10px 10px 10px 10px;
+}
 
+.news-block{
+	width:250px;
+	padding: 10px;
+
+}
+
+.news-block time{
+	margin-left: 100px;
+}
 #nav-right{
     flex-direction: row;
     width: 200px;
@@ -57,8 +82,8 @@ body{
   display: flex;
   flex-direction: column;
   width:100%;
- 	height: 500px;
- 	background: #2b81a3;
+  height: 500px;
+  background: #2b81a3;
   background: linear-gradient(-90deg,#2b81a3 0%, #3db1de 80%);
   background: -webkit-linear-gradient(-90deg,#2b81a3 0%, #3db1de 80%);
   background: -moz-linear-gradient(-90deg,#2b81a3 0%, #3db1de 80%);
@@ -90,8 +115,7 @@ body{
 
  /*上方图标及搜索框*/
  .navbar{
-  flex: 1;
-  direction: row;
+   direction: row;
  	width: 100%;
  	height: 100px;
  }
