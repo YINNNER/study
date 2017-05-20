@@ -244,10 +244,10 @@ class CourseDetailView(APIView):
             return response
         serializer = CourseDetailSerializer(course, data=request.data, many=True)
         if serializer.is_valid(raise_exception=True):
-            username = request.user.username
-            courses = Group.objects.get(name=course.name+'-'+username)
-            num = courses.user_set.all().count()
-            Course.objects.filter(pk=pk).update(student_num=num)
+            #username = request.user.username
+            #courses = Group.objects.get(name=course.name+'-'+username)
+            #num = courses.user_set.all().count()
+           # Course.objects.filter(pk=pk).update(student_num=num)
             response = Response(serializer.data, HTTP_200_OK)
             return response
         else:
