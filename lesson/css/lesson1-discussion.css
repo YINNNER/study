@@ -1,0 +1,29 @@
+/*可伸缩搜索框*/
+.search-input{
+    background: url(image/magnifier.png) no-repeat 9px;
+    background-size: 15px;
+    padding: 8px 5px 8px 32px;
+    margin-top: -25px;
+    margin-left: 200px;
+    width: 70px;
+    border-radius: 18px;
+    color: #3db1de;
+    float:left;
+    outline: none;
+    overflow:hidden;
+    border-radius: 18px;
+    border: 1.5px solid #3db1de;
+    -moz-box-shadow: inset 1px 1px 10px rgba(0,0,0,0.1);
+    -webkit-box-shadow: inset 1px 1px 10px rgba(0,0,0,0.1);
+    box-shadow: inset 1px 1px 10px rgba(0,0,0,0.1);
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+
+}
+
+.search-input:hover, .search-input:focus {
+    border-color: #2b81a3;
+    color: #2b81a3;
+    width: 200px;
+}

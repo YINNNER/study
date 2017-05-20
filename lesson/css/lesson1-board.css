@@ -1,0 +1,225 @@
+body{
+    margin: 0;
+    display: flex;
+    /* nav,study横向右排 */
+    flex-direction: row;
+    color: #676868;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover,a:active,a:visited{
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.study {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    flex-basis: 100%;
+
+}
+
+h3{
+    display: inline-block;
+    font-weight: 400;
+    margin: 0;
+}
+
+h4{
+    display: inline-block;
+    font-weight: 400;
+    margin:0;
+}
+
+/* nav */
+#studyicon{
+    padding: 15px;
+}
+
+.study-nav {
+    /* 导航放到最左边 */
+    order: 0;
+    /* 主边栏的宽度设为11em */
+    color: white;
+    display: flex;
+    flex: 0 0 11em;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+/*导航栏渐变*/
+.study-nav{
+    opacity: 0.85;
+    background: #3db1de; /* Old browsers */
+    background: -moz-linear-gradient(top,  #3db1de 0%, #2b81a3 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #3db1de 0%,#2b81a3 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #3db1de 0%,#2b81a3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3db1de', endColorstr='#2b81a3',GradientType=0 ); /* IE6-9 */
+
+}
+
+.navwords{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin: 30px 0;
+}
+
+.navnamebar:hover{
+    background-color: rgba(255, 255, 255, 0.31);
+}
+
+.navname{
+    padding: 4px 20px;
+    margin: 4px 0;
+    font-weight: 300;
+    align-items: center;
+    display: flex;
+}
+
+.navname>img{
+    padding: 0 20px 0 0;
+}
+
+
+/* header */
+header
+ {
+    flex: 0;
+    flex: 0 0 4.3em;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+
+}
+
+#icon-home{
+    padding: 20px 8px 20px 20px;
+}
+
+#title{
+    margin: auto;
+}
+
+.header-icon{
+    padding: 10px;
+}
+
+.header-icon.right{
+    margin-right: 15px;
+    padding-left: 2px;
+}
+
+/* 下边投影 */
+.study-nav, header{
+    -webkit-box-shadow: 0 0 20px 0 #dedede;
+    box-shadow: 0 0 20px 0 #dedede;
+}
+
+
+/* study body */
+.study-body {
+    display: flex;
+    flex: 1;
+}
+
+
+/* ads */
+.study-ads {
+    /* 副边栏的宽度设为13em */
+    color: #676868;
+    background-color: rgba(226, 232, 234, 0.55);
+    flex: 0 0 15em;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+
+}
+
+.menus-sort{
+    display: flex;
+    margin: 20px 15px;
+}
+
+.menus-sort>img{
+    margin: 10px;
+}
+
+.menus-sort>h4{
+    margin: 10px -4px;
+    color: #6bb7d4;
+}
+
+.ads-menus{
+    display: flex;
+    padding: 10px 30px;
+    margin-bottom: 20px;
+    color: #676868;
+}
+
+.ads-menus:hover,.ads-menus:active,.ads-menus:visited{
+    color: #676868;
+}
+
+
+.ads-menus>span{
+    padding: 0 0 0 20px;
+}
+
+.changetime{
+    color: #abaeae;
+    font-size: smaller;
+}
+
+.ads-menus:hover{
+    background-color: rgba(255, 255, 255, 0.89);
+    border-right: 5px solid #62b8d9;
+}
+
+
+/* content */
+.study-content {
+    flex: 1;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.study-content>p{
+    line-height: 2;
+}
+
+.content-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.content-title>img{
+    padding: 0 20px;
+}
+
+/*响应式，小屏幕躯干的三栏自动变为垂直叠加*/
+@media (max-width: 768px) {
+    .study-body {
+        flex-direction: column;
+        flex: 1;
+    }
+    .study-nav,
+    .study-ads,
+    .study-content {
+        flex: auto;
+    }
+}
+
