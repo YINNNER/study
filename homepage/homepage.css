@@ -13,8 +13,8 @@ body{
     display: flex;
     align-items: center;
  	  /*下方灰色阴影*/
-/*webkit-box-shadow: 0 0 20px 0 #dedede;
-    box-shadow: 0 0 20px 0 #dedede;*/
+ 	  -webkit-box-shadow: 0 0 20px 0 #dedede;
+    box-shadow: 0 0 20px 0 #dedede;
  }
  a{
     text-decoration: none;
@@ -37,11 +37,12 @@ body{
     margin: 0;
 }
  .header-icon{
-    padding: 10px 5px 10px 10px;
+    padding: 10px;
     margin-top: 10px;
 }
 
 .header-icon.right{
+    margin-right: 15px;
     margin-top: 14px;
     padding-top: 20px;
 }
@@ -108,25 +109,25 @@ body{
  /*可伸缩搜索框*/
 .search-input{
 	background: url(images/magnifier.png) no-repeat 9px;
-  background-size: 15px;
+    background-size: 15px;
 	padding: 8px 5px 8px 32px;
-  margin-top: -25px;
-  margin-left: 200px;
+     margin-top: -25px;
+    margin-left: 200px;
 	width: 70px;
 	border-radius: 18px; 
 	color: #3db1de; 
-  float:left;
-          
-            outline: none; 
-            overflow:hidden; 
-            border-radius: 18px; 
-            border: 1.5px solid #3db1de; 
-            -moz-box-shadow: inset 1px 1px 10px rgba(0,0,0,0.1); 
-            -webkit-box-shadow: inset 1px 1px 10px rgba(0,0,0,0.1); 
-            box-shadow: inset 1px 1px 10px rgba(0,0,0,0.1); 
-            /*-webkit-transition: all .3s; 
-            -moz-transition: all .3s; 
-            -o-transition: all .3s; */
+    float:left;
+    outline: none;
+    overflow:hidden;
+    border-radius: 18px;
+    border: 1.5px solid #3db1de;
+    -moz-box-shadow: inset 1px 1px 10px rgba(0,0,0,0.1);
+    -webkit-box-shadow: inset 1px 1px 10px rgba(0,0,0,0.1);
+    box-shadow: inset 1px 1px 10px rgba(0,0,0,0.1);
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+
 }
 
 .search-input:hover, .search-input:focus {
@@ -134,6 +135,7 @@ body{
     color: #2b81a3;
     width: 200px;
 }
+
  /*homepage课程部分*/
  .main{
   display: flex;
