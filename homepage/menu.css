@@ -48,7 +48,8 @@ ul, li{
 .menu li:hover ul {
 	background: #ECF4F7;
 	border-radius: 0 0 6px 6px;
-	left: -33px;
+	left: -24px;
+	top:75px;
 	opacity: 1;
 }
 
