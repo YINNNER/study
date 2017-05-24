@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a21c349-32fe-4cbc-86b0-a4a1ca25c9a1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homepage/homepage.css" afterPath="$PROJECT_DIR$/homepage/homepage.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lesson/css/lesson1-discussion.css" afterPath="$PROJECT_DIR$/lesson/css/lesson1-discussion.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lesson/lesson1-discussion.html" afterPath="$PROJECT_DIR$/lesson/lesson1-discussion.html" />
-    </list>
+    <list default="true" id="3a21c349-32fe-4cbc-86b0-a4a1ca25c9a1" name="Default" comment="" />
     <ignored path="study.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -54,7 +49,7 @@
       <file leaf-file-name="lesson1-discussion.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lesson/lesson1-discussion.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
+            <state relative-caret-position="1178">
               <caret line="96" column="22" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
               <folding>
                 <element signature="n#div#0;n#div#1;n#main#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -294,12 +289,12 @@
       <workItem from="1494859494434" duration="3900000" />
       <workItem from="1495249374629" duration="2676000" />
       <workItem from="1495415782738" duration="1000" />
-      <workItem from="1495625279652" duration="9161000" />
+      <workItem from="1495625279652" duration="9541000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57420000" />
+    <option name="totallyTimeSpent" value="57800000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="197" y="16" width="932" height="750" extended-state="0" />
@@ -552,7 +547,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lesson/lesson1-discussion.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
+        <state relative-caret-position="1178">
           <caret line="96" column="22" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
           <folding>
             <element signature="n#div#0;n#div#1;n#main#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
