@@ -92,7 +92,7 @@ body{
  /*上方图标及搜索框*/
  .navbar{
   flex: 1;
-  direction: row;
+  flex-direction: row;
  	width: 100%;
  	height: 100px;
  }
