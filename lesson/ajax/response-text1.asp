@@ -1,7 +1,7 @@
 <html>
 <body>
 <div class="content-title"><h3>课程要求</h3>
-<img src="image/change.png" height="25px" width="auto"/>
+<img src="../image/change.png" height="25px" width="auto"/>
                 </div>
                 <img src="image/mayuan.png" width="400px" height="auto"/>
                 <p >马克思主义基本原理概论”课程，属于高校思想政治理论课程，是每一个大学生的必修课、
