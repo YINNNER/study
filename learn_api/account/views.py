@@ -31,7 +31,7 @@ import requests
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 
-class StuUserCreateView(APIView):
+class UserCreateView(APIView):
     serializer_class = UserCreateSerializer
     permission_classes = [AllowAny]
     authentication_classes = [SessionAuthentication]
@@ -44,22 +44,29 @@ class StuUserCreateView(APIView):
         yzm_text = serializer.validated_data['yzm_text']
         yzm_cookie = serializer.validated_data['yzm_cookie']
 
-        reply = {}
         try:
             spider(username, password, yzm_text, yzm_cookie)
             user_obj = User(username=username)
             user_obj.set_password(password)
             user_obj.save()
-            stu_group = Group.objects.get(name="student")
-            user_obj.groups.add(stu_group)
+            if len(username) == 13:
+                stu_group = Group.objects.get(name="student")
+                user_obj.groups.add(stu_group)
+            else:
+                pro_group = Group.objects.get(name='teacher')
+                user_obj.groups.add(pro_group)
             # content_type = ContentType.objects.get(model='WHU')
             # pro_permission = Permission.objects.create(codename='has_publish_signin',
             #                                            name='Can publish',
             #                                            content_type=content_type)
             # user_obj.user_permissions.add(pro_permission)
             try:
-                student = WHU.objects.create(user=user_obj, is_teacher=False)
-                student.save()
+                if len(username) == 13:
+                    student = WHU.objects.create(user=user_obj, is_teacher=False)
+                    student.save()
+                else:
+                    teacher = WHU.objects.create(user=user_obj, is_teacher=True)
+                    teacher.save()
                 content = {'msg': 'Create user successful'}
                 return Response(content, HTTP_200_OK)
             except Exception as e:
@@ -102,42 +109,42 @@ class UserLoginView(APIView):
         return Response(serializer.errors, status=HTTP_400_BAD_REQUEST)
 
 
-class ProUserCreateView(APIView):
-    serializer_class = UserCreateSerializer
-    permission_classes = [AllowAny]
-    authentication_classes = [SessionAuthentication]
+# class ProUserCreateView(APIView):
+#     serializer_class = UserCreateSerializer
+#     permission_classes = [AllowAny]
+#     authentication_classes = [SessionAuthentication]
 
-    def post(self, request):
-        serializer = UserCreateSerializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        username = serializer.validated_data['username']
-        password = serializer.validated_data['password']
-        yzm_text = serializer.validated_data['yzm_text']
-        yzm_cookie = serializer.validated_data['yzm_cookie']
-        reply = {}
-        if spider(username, password, yzm_text, yzm_cookie) is True:
-            user_obj = User(username=username)
-            user_obj.set_password(password)
-            user_obj.save()
-            pro_group = Group.objects.get(name='teacher')
-            user_obj.groups.add(pro_group)
-            # content_type = ContentType.objects.get(model='WHU')
-            # pro_permission = Permission.objects.create(codename='has_publish_signin',
-            #                                            name='Can publish signin',
-            #                                            content_type=content_type)
-            # user_obj.user_permissions.add(pro_permission)
-            try:
-                pro = WHU.objects.create(user=user_obj, is_teacher=True)
-                pro.save()
-                content = {'msg': 'Create user successful'}
-                return Response(content, HTTP_200_OK)
-            except Exception as e:
-                # print e.message
-                reply = {'error': 'Create user_student failed'}
-                return Response(reply, HTTP_400_BAD_REQUEST)
-        else:
-            reply = {'error': 'Create user failed'}
-            return Response(reply, HTTP_400_BAD_REQUEST)
+#     def post(self, request):
+#         serializer = UserCreateSerializer(data=request.data)
+#         serializer.is_valid(raise_exception=True)
+#         username = serializer.validated_data['username']
+#         password = serializer.validated_data['password']
+#         yzm_text = serializer.validated_data['yzm_text']
+#         yzm_cookie = serializer.validated_data['yzm_cookie']
+#         reply = {}
+#         if spider(username, password, yzm_text, yzm_cookie) is True:
+#             user_obj = User(username=username)
+#             user_obj.set_password(password)
+#             user_obj.save()
+#             pro_group = Group.objects.get(name='teacher')
+#             user_obj.groups.add(pro_group)
+#             # content_type = ContentType.objects.get(model='WHU')
+#             # pro_permission = Permission.objects.create(codename='has_publish_signin',
+#             #                                            name='Can publish signin',
+#             #                                            content_type=content_type)
+#             # user_obj.user_permissions.add(pro_permission)
+#             try:
+#                 pro = WHU.objects.create(user=user_obj, is_teacher=True)
+#                 pro.save()
+#                 content = {'msg': 'Create user successful'}
+#                 return Response(content, HTTP_200_OK)
+#             except Exception as e:
+#                 # print e.message
+#                 reply = {'error': 'Create user_student failed'}
+#                 return Response(reply, HTTP_400_BAD_REQUEST)
+#         else:
+#             reply = {'error': 'Create user failed'}
+#             return Response(reply, HTTP_400_BAD_REQUEST)
 
 
 
