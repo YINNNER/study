@@ -158,11 +158,38 @@ HAYSTACK_CONNECTIONS = {
 }
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
+
 #跨域访问
 CORS_ORIGIN_WHITELIST = (
-    #'*'
-    '127.0.0.1:8080', #请求的域名
-    'localhost:8000',
-    'localhost',
-    '192.168.1.11:8080',
+    #'*'，
+	'127.0.0.1:8000',
+	' ',   #添加你的地址
 )
+
+CORS_ALLOW_METHODS = (
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+    'VIEW',
+)
+
+CORS_ALLOW_HEADERS = (
+    'XMLHttpRequest',
+    'X_FILENAME',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+    'Pragma',
+)
+
+CSRF_TRUSTED_ORIGINS  =（
+     ' '，   #添加你的地址
+）
