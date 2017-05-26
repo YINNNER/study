@@ -136,8 +136,7 @@ REST_FRAMEWORK = {
     ),
     "DEFAULT_PERMISSION_CLASSES": (
         'rest_framework.permissions.IsAuthenticated',
-        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
-    )
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',    )
 }
 
 # Static files (CSS, JavaScript, Images)
@@ -190,6 +189,6 @@ CORS_ALLOW_HEADERS = (
     'Pragma',
 )
 
-CSRF_TRUSTED_ORIGINS  =（
-     ' '，   #添加你的地址
-）
+CSRF_TRUSTED_ORIGINS  = (
+     ' ',  #添加你的地址
+)
