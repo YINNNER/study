@@ -205,11 +205,87 @@ header
     justify-content: space-between;
     padding-bottom: 30px;
 }
-
-.content-title>img{
-    padding: 0 20px;
+.content-title-icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#left1{
+    margin-left: 30px;
+}
+#right1{
+    margin-left: 10px;
+}
+.search-input{
+    background: url(../image/magnifier.png) no-repeat 9px;
+    background-size: 15px;
+    padding: 8px 5px 8px 32px;
+    margin-right: 20px;
+    width: 150px;
+    border-radius: 18px;
+    color: #3db1de;
+    outline: none;
+    overflow:hidden;
+    border: 1.5px solid #3db1de;
 }
 
+.search-input:hover, .search-input:focus {
+    border-color: #2b81a3;
+    color: #2b81a3;
+}
+.content-title>img{
+    padding-left: 20px;
+}
+.content-resource{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    margin: 0 auto;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.08);;
+    -webkit-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.08);;
+    -moz-box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.08);;
+}
+.content-resource-title{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    align-items:center;
+    color: #848484;
+}
+.content-resource-title-left{
+    margin-left: 60px;
+
+}
+.content-resource-title-right{
+    margin-left: 300px;
+
+}
+.content-resource-info-left{
+    margin-left: 80px;
+}
+.content-resource-info-right{
+    margin-left: 290px;
+}
+.content-resource-block{
+    display: flex;
+    flex-direction: row;
+    background-color: #f1f1f1;
+    margin: 0 0 20px 0;
+}
+.content-resource-block h3{
+    margin: 15px 0 0 10px;
+
+}
+#download{
+    width: auto;
+    height: 30px;
+    margin: 10px 0 0 90px;
+}
+#pdf{
+    width: auto;
+    height: 30px;
+    margin: 10px 0 0 60px;
+}
 /*响应式，小屏幕躯干的三栏自动变为垂直叠加*/
 @media (max-width: 768px) {
     .study-body {
