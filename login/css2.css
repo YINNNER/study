@@ -1,0 +1,205 @@
+body{
+    margin: 0;
+    font-family: "Microsoft Yahei";
+    text-align: center;
+    overflow: auto;
+    background: url("images/background.png") no-repeat;
+    background-size:cover;
+}
+
+.two::before{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: "";
+
+}
+
+
+.two{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    color: #FFF;
+    text-align: center;}
+.logo{
+    width:240px;
+    height:120px;
+    align-content: center;
+    margin-top: 120px;
+    margin-bottom: 50px;
+}
+
+span{
+    font-size: 20px;
+    position: absolute;
+    bottom: 60px;
+    width: 200px;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+    padding-bottom: 40px;
+    left: 0;
+    right: 0;
+    text-transform: uppercase;}
+i{
+    margin-top: 20px;
+    display: block;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse 2s infinite;}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0); }
+    50% {
+        -webkit-transform: translate(0, 10px);
+        transform: translate(0, 10px); }
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0); } }
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0); }
+    50% {
+        -webkit-transform: translate(0, 10px);
+        transform: translate(0, 10px); }
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0); } }
+
+i::before{
+    top:0;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    border-style: solid;
+    border-width: 0.25em 0.25em 0 0;
+    content: '';
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    vertical-align: top;
+    width: 20px;
+    box-sizing: border-box;}
+
+i,span{opacity: 0.85;}
+i:hover,i:active,span:hover,span:hover{opacity: 1;}
+h1{
+    font-size: 100px;
+    font-family: "Microsoft Yahei";
+    color:white;
+    font-weight: 100;
+    margin-top:80px;
+    margin-bottom: 10px;
+
+}
+p{
+    margin-top: -20px;
+    font-family: "Microsoft Yahei";
+    color:white;
+    line-height:3;
+    font-size: 20px;
+    font-weight: lighter;
+}
+.container {
+
+    width:360px;
+    margin:0 auto;
+    position:relative;
+    background: rgba(255, 255, 255, 1);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+.header {
+    height:50px;
+    border-bottom:1px solid #e2e2e2;
+    position:relative;
+    font-family:"Microsoft Yahei";
+}
+.header .switch {
+    height:45px;
+    position:absolute;
+    left:60px;
+    bottom:0;
+    font-size:16px;
+}
+.header .switch #switch_qlogin {
+    margin-right:85px;
+}
+.header .switch .switch_btn {
+    color:#999;
+    display:inline-block;
+    height:45px;
+    line-height:45px;
+    outline:none;
+    *hide-focus:expression(this.hideFocus=true);
+}
+.header .switch .switch_btn_focus {
+    color:#333;
+    display:inline-block;
+    height:45px;
+    line-height:45px;
+    outline:none;
+    *hide-focus:expression(this.hideFocus=true);
+}
+.header .switch .switch_btn:hover {
+    color:#333;
+    text-decoration:none;
+}
+.header .switch .switch_btn_focus:hover {
+    text-decoration:none;
+}
+#switch_bottom {
+    position:absolute;
+    bottom:-1px;_bottom:-2px;
+    border-bottom:2px solid #848484;
+}
+#contact {
+    padding:25px;
+    margin-top:20px;
+    border-radius:5px;
+}
+#contact input[type="text"], #contact input[type="password"]{
+    width:80%;
+    border:2px solid white;
+    outline:none;
+    background: rgba(225, 225, 225, 0.63);
+
+    padding:10px;
+    border-radius:5px;
+
+}
+#contact input[type="submit"]
+{
+    cursor:pointer;
+    width:40%;
+    background-color: skyblue;
+    color:#fff;
+
+    padding:5px;
+    font-size:20px;
+    border:2px solid white;
+    border-radius:5px;
+
+}
+fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100px;
+    max-width:400px;
+    align-self: center;
+    padding: 0;
+
+}
+#contact input[type="submit"]:hover,#contact input[type="submit"]:active{
+    background-color:rgba(225, 225, 225, 0.63);
+}
+

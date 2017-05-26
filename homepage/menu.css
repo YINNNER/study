@@ -1,0 +1,115 @@
+ul, li{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	
+}
+
+.menu-news li {
+	float: left;
+	position: relative;
+}
+
+.menu-news li a {
+	color: blue;
+	font-style:italic;
+	font-size: 5px;
+	padding: 10px 20px;
+	text-decoration: none;
+
+}
+
+/* Dropdown styles */
+
+.menu-news ul {
+	position: absolute;
+	left: -9999px;
+	list-style: none;
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+
+.menu-news ul li {
+	float: none;
+}
+
+
+/* Displays the dropdown on hover and moves back into position */
+.menu-news li:hover ul {
+	background: #ECF4F7;
+	border-radius: 0 0 6px 6px;
+	left: -300px;
+	top:75px;
+	opacity: 1;
+}
+
+/* Persistant Hover State */
+.menu-news li:hover a {
+	color: #3db1de ;
+}
+
+
+.menu-news li:hover ul li a:hover {
+	color: #2b81a3;
+    border-radius: 0 0 6px 6px;
+}
+/** setting*/
+.menu-setting li {
+	float: left;
+	position: relative;
+}
+
+.menu-setting li a {
+	color: #ECF4F7;
+	display: block;
+	font-size: 14px;
+	line-height: 20px;
+	padding: 10px 20px;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+}
+.menu-setting li div {
+	height: 300px;
+
+}
+/* Dropdown styles */
+
+.menu-setting ul {
+	position: absolute;
+	left: -9999px;
+	list-style: none;
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+
+.menu-setting ul li {
+	float: none;
+}
+
+.menu-setting ul a {
+	white-space: nowrap;
+}
+
+/* Displays the dropdown on hover and moves back into position */
+.menu-setting li:hover ul {
+	background: #ECF4F7;
+	border-radius: 0 0 6px 6px;
+	left: -25px;
+	top:75px;
+	opacity: 1;
+}
+
+/* Persistant Hover State */
+.menu-setting li:hover a {
+	color: #969798;
+}
+
+
+.menu-setting li:hover ul li a:hover {
+	background-color:#ccd3d6;
+	color: #555556;
+    border-radius: 0 0 6px 6px;
+}
+
+
