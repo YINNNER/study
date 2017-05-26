@@ -14,10 +14,12 @@ pip install -r requirement.txt
 
 CORS_ORIGIN_WHITELIST = (
     #'*'
-    '127.0.0.1:8080', #请求的域名
-    'localhost:8000',
-    'localhost',
-    '192.168.1.11:8080',
+    '127.0.0.1:8000', 
+    ' ',   #前端请求的域名
 )
+
+CSRF_TRUSTED_ORIGINS  =（
+     ' '，   #添加你的地址
+）
 
 
