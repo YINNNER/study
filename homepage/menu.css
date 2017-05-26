@@ -1,8 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 ul, li{
 	margin: 0;
 	padding: 0;
@@ -10,12 +5,61 @@ ul, li{
 	
 }
 
-.menu li {
+.menu-news li {
 	float: left;
 	position: relative;
 }
 
-.menu li a {
+.menu-news li a {
+	color: blue;
+	font-style:italic;
+	font-size: 5px;
+	padding: 10px 20px;
+	text-decoration: none;
+
+}
+
+/* Dropdown styles */
+
+.menu-news ul {
+	position: absolute;
+	left: -9999px;
+	list-style: none;
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+
+.menu-news ul li {
+	float: none;
+}
+
+
+/* Displays the dropdown on hover and moves back into position */
+.menu-news li:hover ul {
+	background: #ECF4F7;
+	border-radius: 0 0 6px 6px;
+	left: -300px;
+	top:75px;
+	opacity: 1;
+}
+
+/* Persistant Hover State */
+.menu-news li:hover a {
+	color: #3db1de ;
+}
+
+
+.menu-news li:hover ul li a:hover {
+	color: #2b81a3;
+    border-radius: 0 0 6px 6px;
+}
+/** setting*/
+.menu-setting li {
+	float: left;
+	position: relative;
+}
+
+.menu-setting li a {
 	color: #ECF4F7;
 	display: block;
 	font-size: 14px;
@@ -25,10 +69,13 @@ ul, li{
 	text-align: center;
 	text-decoration: none;
 }
+.menu-setting li div {
+	height: 300px;
 
+}
 /* Dropdown styles */
 
-.menu ul {
+.menu-setting ul {
 	position: absolute;
 	left: -9999px;
 	list-style: none;
@@ -36,29 +83,30 @@ ul, li{
 	transition: opacity 1s ease;
 }
 
-.menu ul li {
+.menu-setting ul li {
 	float: none;
 }
 
-.menu ul a {
+.menu-setting ul a {
 	white-space: nowrap;
 }
 
 /* Displays the dropdown on hover and moves back into position */
-.menu li:hover ul {
+.menu-setting li:hover ul {
 	background: #ECF4F7;
 	border-radius: 0 0 6px 6px;
-	left: -33px;
+	left: -25px;
+	top:75px;
 	opacity: 1;
 }
 
 /* Persistant Hover State */
-.menu li:hover a {
+.menu-setting li:hover a {
 	color: #969798;
 }
 
 
-.menu li:hover ul li a:hover {
+.menu-setting li:hover ul li a:hover {
 	background-color:#ccd3d6;
 	color: #555556;
     border-radius: 0 0 6px 6px;
