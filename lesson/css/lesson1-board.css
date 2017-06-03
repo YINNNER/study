@@ -286,16 +286,13 @@ header
     height: 30px;
     margin: 10px 0 0 60px;
 }
-/*响应式，小屏幕躯干的三栏自动变为垂直叠加*/
-@media (max-width: 768px) {
-    .study-body {
-        flex-direction: column;
-        flex: 1;
-    }
-    .study-nav,
-    .study-ads,
-    .study-content {
-        flex: auto;
-    }
+
+html,body{
+    height: 100%;       /*必须定死最大容器html、body的高度，以便只让main中出现滚动条*/
+    
+}
+
+main{
+    overflow-y: auto;                             /*竖向滚动条*/
 }
 
