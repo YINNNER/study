@@ -1,0 +1,23 @@
+1. 安装依赖
+pip install -r requirement.txt
+2. 进入项目
+   cd learn_api/
+3. 更新
+   python manage.py makemigrations
+   python manage.py migrate
+4. 运行
+   python manage.py runserver
+
+
+5.  跨域
+在learn_api/setting.py 中
+
+CORS_ORIGIN_WHITELIST = (
+    #'*'
+    '127.0.0.1:8080', #请求的域名
+    '127.0.0.1:8000', #后台运行时的服务器域名
+    'localhost',
+
+)
+
+
