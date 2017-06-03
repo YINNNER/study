@@ -20,4 +20,5 @@ CORS_ORIGIN_WHITELIST = (
 
 )
 
-
+6.python manage.py createsuperuser   #创建管理员用户
+  127.0.0.1:8000/admin      #login
