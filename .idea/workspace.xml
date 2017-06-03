@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a21c349-32fe-4cbc-86b0-a4a1ca25c9a1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lesson/ajax/response-text1.asp" afterPath="$PROJECT_DIR$/lesson/ajax/response-text1.asp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lesson/css/lesson1-board.css" afterPath="$PROJECT_DIR$/lesson/css/lesson1-board.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lesson/lesson1-board.html" afterPath="$PROJECT_DIR$/lesson/lesson1-board.html" />
-    </list>
+    <list default="true" id="3a21c349-32fe-4cbc-86b0-a4a1ca25c9a1" name="Default" comment="" />
     <ignored path="study.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -32,8 +26,9 @@
       <file leaf-file-name="lesson1-board.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lesson/lesson1-board.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
+            <state relative-caret-position="4902">
+              <caret line="258" column="1" selection-start-line="258" selection-start-column="1" selection-end-line="258" selection-end-column="1" />
+
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#nav#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -45,8 +40,8 @@
       <file leaf-file-name="board-refresh.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lesson/js/board-refresh.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="28" column="69" selection-start-line="28" selection-start-column="69" selection-end-line="28" selection-end-column="69" />
+            <state relative-caret-position="1748">
+              <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -65,9 +60,11 @@
       <file leaf-file-name="lesson1-board.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lesson/css/lesson1-board.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5529">
-              <caret line="291" column="4" selection-start-line="291" selection-start-column="4" selection-end-line="291" selection-end-column="4" />
-              <folding />
+            <state relative-caret-position="2090">
+              <caret line="114" column="1" selection-start-line="114" selection-start-column="1" selection-end-line="114" selection-end-column="1" />
+              <folding>
+                <element signature="e#88#171#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,8 +131,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="98" />
-    <option name="y" value="25" />
+    <option name="x" value="46" />
+    <option name="y" value="415" />
     <option name="width" value="1105" />
     <option name="height" value="750" />
   </component>
@@ -372,19 +369,17 @@
       <workItem from="1494859494434" duration="3900000" />
       <workItem from="1495249374629" duration="2676000" />
       <workItem from="1495415782738" duration="1000" />
-      <workItem from="1495625279652" duration="9541000" />
-      <workItem from="1495688197221" duration="2269000" />
-      <workItem from="1495936275293" duration="633000" />
-      <workItem from="1496457048534" duration="643000" />
+      <workItem from="1495625279652" duration="9161000" />
+      <workItem from="1496462396799" duration="166000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61345000" />
+    <option name="totallyTimeSpent" value="57586000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="98" y="25" width="1105" height="750" extended-state="0" />
-    <editor active="true" />
+    <frame x="46" y="415" width="1105" height="750" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25369003" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -531,6 +526,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/homepage/homepage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1748">
+          <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/login/Login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -540,14 +543,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/homepage/homepage.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="92" column="9" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+        <state relative-caret-position="281">
+          <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#nav#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login/css1.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
+        <state relative-caret-position="4902">
           <caret line="258" column="1" selection-start-line="258" selection-start-column="1" selection-end-line="258" selection-end-column="1" />
         </state>
       </provider>
@@ -568,7 +575,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lesson/css/lesson1-discussion.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
+        <state relative-caret-position="2090">
           <caret line="114" column="1" selection-start-line="114" selection-start-column="1" selection-end-line="114" selection-end-column="1" />
         </state>
       </provider>
