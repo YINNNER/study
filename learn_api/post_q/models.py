@@ -34,11 +34,11 @@ class Post(models.Model):
 class Course(models.Model):
     name = models.CharField(max_length=24)
     content = models.TextField(max_length=2048)
-    teacher = models.ForeignKey(User)
-    #student = models.ForeignKey()
+    teacher = models.ForeignKey(User, related_name='teacher')
+    student = models.ManyToManyField(User, related_name='student')
     sign_in = models.BooleanField(default=False)
    # del_sign_in = models.NBooleanField(null=True, default=True)
-    student_num = models.CharField(max_length=500, null=True, default=0)
+    student_num = models.PositiveSmallIntegerField(null=True, default=0)
     def __str__(self):
         return self.name
 
