@@ -118,7 +118,7 @@ class PostView(APIView):
             files = serializer.validated_data['files']
             posts = Post.objects.create(author=user, title=title, content=content, course=course, files=files)
             posts.save()
-            reply = {"msg": "Create Question Successfully"}
+            reply = {"msg": "Create Post Successfully"}
             response = Response(reply, HTTP_200_OK)
             return response
         else:
@@ -153,7 +153,7 @@ class PostDetailView(APIView):
     def delete(self, request, pk):
         user = request.user
         try:
-            posts = Post.objects.get(user=user,pk=pk)
+            posts = Post.objects.get(user=user, pk=pk)
             try:
                 posts.delete()
                 content = {'msg': 'Delete Successfully'}
@@ -184,7 +184,7 @@ class CourseView(APIView):
             content = serializer.validated_data['content']
             course = Course.objects.create(teacher=teacher, name=name, content=content)
             course.save()
-            course_group = Group.objects.create(name=name+'-'+teacher.first_name)
+            course_group = Group.objects.create(name=name+'-'+teacher.username)
             teacher.groups.add(course_group)
             reply = {'msg': 'Create course successfully'}
             response = Response(reply, HTTP_200_OK)
@@ -195,7 +195,12 @@ class CourseView(APIView):
             return response
 
     def get(self, request):
-        queryset = Course.objects.all()
+        teacher = request.user
+        whu = WHU.objects.get(user=teacher).is_teacher
+        if whu is True:
+            queryset = Course.objects.filter(teacher=request.user)
+        else:
+            queryset = Course.objects.filter(student=request.user)
         serializer = CourseDetailSerializer(queryset, data=request.data, many=True)
         serializer.is_valid(raise_exception=True)
         response = Response(serializer.data, HTTP_200_OK)
@@ -332,7 +337,11 @@ class AddCourseView(APIView):
             serializer.is_valid(raise_exception=True)
             name = serializer.validated_data['name']
             teacher = serializer.validated_data['teacher']
-            cs = Group.objects.get(name=name+'-'+teacher.first_name)
+            course = Course.objects.get(teacher=teacher, name=name)
+            course.student.add(user)
+            course.student_num += 1
+            course.save()
+            cs = Group.objects.get(name=name+'-'+teacher.username)
             user.groups.add(cs)
             reply = {'msg': 'Join successfully'}
             response = Response(reply, HTTP_200_OK)
@@ -369,3 +378,4 @@ class AddCourseView(APIView):
 #         reply = {'msg': 'Publish Successfully'}
 #         response = Response(reply, HTTP_200_OK)
 #         return response
+
