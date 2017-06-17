@@ -163,6 +163,9 @@ class UserDetailView(APIView):
 
 
 class YzmView(APIView):
+
+    permission_classes = [AllowAny]
+
     def get(self, request):
         username = request.user.username
         image_url = 'http://210.42.121.241/servlet/GenImg'
