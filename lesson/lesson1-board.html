@@ -6,6 +6,7 @@
     <title>马克思主义基本原理概论</title>
     <link rel="stylesheet" type="text/css" href="css/lesson1-board.css">
     <script src="js/board-refresh.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
 </head>
 
 <body>
@@ -45,7 +46,7 @@
                 <div class="menus-sort">
                 <img src="image/rank.png" height="20px" width="auto"/>
                 <img src="image/plus.png" height="20px" width="auto"/>
-                <h4 onclick="announcement()">创建新公告</h4>
+                <h4 id="h4" >创建新公告</h4>
                 </div>
                 <a onclick="refresh(1)" class="ads-menus">
                     <img src="image/board.png" height="40px" width="auto"/>
@@ -65,45 +66,38 @@
                 <div class="content-title"><h3>课程要求</h3><img src="image/change.png" height="25px" width="auto"/>
                 </div>
                 <img src="image/mayuan.png" width="400px" height="auto"/>
-                <p >马克思主义基本原理概论”课程，属于高校思想政治理论课程，是每一个大学生的必修课、
-                    基础课。课程内容涵盖了马克思主义哲学，马克思主义政治经济学和科学社会主义等有机统一的基
-                    本组成部分，具体包括：绪论、世界的物质性及发展规律、认识的本质及发展规律、
-                    人类社会及其发展规律、资本主义的本质及规律、资本主义的发展及其趋势、
-                    社会主义的发展及其规律、共产主义崇高理想及其最终实现。
-                    着力体现整体关照与重点突出、逻辑严谨与表达生动、
-                    把握理论与传授方法的有机统一，是本课程的基本特色。</p>
+                <p id="1">马克思主义基本原理概论”课程，属于高校思想政治理论课程，是每一个大学生的必修课、 基础课。
+                    课程内容涵盖了马克思主义哲学，马克思主义政治经济学和科学社会主义等有机统一的基本组成部分，
+                    具体包括：绪论、世界的物质性及发展规律、认识的本质及发展规律、 人类社会及其发展规律、资本主义的本质及规律、
+                    资本主义的发展及其趋势、 社会主义的发展及其规律、共产主义崇高理想及其最终实现。
+                    着力体现整体关照与重点突出、逻辑严谨与表达生动、 把握理论与传授方法的有机统一，是本课程的基本特色。
+                    </p>
             </main>
         </div>
     </div>
+
 <script>
-        function announcement(){
-            // 新建XMLHttpRequest对象
-            var request;
-            if (window.XMLHttpRequest)
-            {// code for IE7+, Firefox, Chrome, Opera, Safari
-                request=new XMLHttpRequest();
-            }
-            else
-            {// code for IE6, IE5
-                request=new ActiveXObject("Microsoft.XMLHTTP");
-            }
-
-            request.onreadystatechange = function () {  // 状态发生变化时，函数被回调
-                if (request.readyState === 4&&request.status === 200) { // 成功完成
-                    // 判断响应结果:
-                    // 成功，通过responseText拿到响应的文本:
-                    console.log(request.responseText);
-                    document.getElementById("show-here").innerHTML=request.responseText;
+        $("#h4").click(function(){
+            $.ajax({
+                type : "GET",
+                url : "//127.0.0.1:8000/xxl/post/5",
+                success : function(data,textStatus){
+                    alert(data[0].title);
+                    this;
+                },
+                dataType : "json",
+                crossDomain: "true",
+                error:function(XMLHttpRequest, textStatus, errorThrown){
+                    alert("请求对象XMLHttpRequest: "+XMLHttpRequest);
+                    alert(XMLHttpRequest.status);
+                    alert(XMLHttpRequest.readyState);
+                    alert("错误类型textStatus: "+textStatus);
+                    alert("异常对象errorThrown: "+errorThrown);
                 }
-
-            }
-
-            request.open('get', '//127.0.0.1:8080/api/user/stu_register',true); // 发送请求:
-            request.send();
-
-
-        }
+            });
+        })
     </script>
+
 </body>
 
 </html>

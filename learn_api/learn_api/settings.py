@@ -161,10 +161,13 @@ HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 #跨域访问
 
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_ALLOW_ALL = True
+
 CORS_ORIGIN_WHITELIST = (
-    #'*'，
+    
 	'127.0.0.1:8000',
-	' ',   #添加你的地址
+	'*',   #添加你的地址
 )
 
 CORS_ALLOW_METHODS = (
@@ -192,6 +195,6 @@ CORS_ALLOW_HEADERS = (
 )
 
 CSRF_TRUSTED_ORIGINS = (
-     ' ',   #添加你的地址
+     '*',   #添加你的地址
      '127.0.0.1:8000',
 )

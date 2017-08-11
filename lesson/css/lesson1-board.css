@@ -33,11 +33,16 @@ h3{
     margin: 0;
 }
 
-h4{
+#h4{
     display: inline-block;
     font-weight: 400;
-    margin:0;
+
 }
+
+#h4:hover{
+    cursor: pointer;
+}
+
 
 /* nav */
 #studyicon{
